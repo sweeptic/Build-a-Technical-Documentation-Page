@@ -1,0 +1,151 @@
+:root {
+  --color-grey-1: #fff;
+  --color-grey-2: #d1d1d1;
+  --color-grey-3: rgb(119, 119, 119);
+  --color-grey-dark-1: #252529;
+  --color-primary-green: #28b76b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  line-height: 1.6rem;
+  color: var(--color-grey-dark-1);
+}
+
+h1 {
+  font-size: calc(2.5rem + 2.7vw);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: calc(2.3rem + 2.7vw);
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: calc(2.1rem + 0.6vw);
+  font-weight: 600;
+  padding-bottom: 1rem;
+}
+
+h5 {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.text-muted {
+  color: #6c757d !important;
+  /* color: red; */
+}
+
+/* NAVBAR */
+.navbar {
+  position: sticky;
+  top: 0;
+  min-height: 5rem;
+  background-color: yellowgreen;
+  display: flex;
+}
+.navbar-brand {
+  font-size: 2rem;
+}
+
+.nav-links {
+  font-size: 1.6rem;
+  color: rgba(0, 0, 0, 0.55);
+}
+
+/* LAYOUT  */
+
+.docs-page {
+  grid-template-columns: ;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: minmax(12px, 1fr) minmax(auto, 540px) minmax(12px, 1fr);
+}
+.docs-sidebar {
+  /* width: 20px; */
+  /* overflow: hidden; */
+  background-color: rgba(172, 255, 47, 0.692);
+}
+
+.docs-content {
+  background-color: wheat;
+}
+
+/* OTHER */
+.section {
+  padding: 5rem 0;
+}
+
+/* MEDIA */
+/* MEDIA */
+/* MEDIA */
+/* MEDIA */
+/* MEDIA */
+/* MEDIA */
+/* MEDIA */
+/* MEDIA */
+
+@media screen and (min-width: 576px) {
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    grid-template-columns: 1fr minmax(auto, 720px) 1fr;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    grid-template-columns: 1fr minmax(auto, 960px) 1fr;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  h2 {
+    font-size: 5.2rem;
+  }
+
+  h3 {
+    font-size: 2.5rem;
+  }
+
+  .container {
+    grid-template-columns: 1fr minmax(auto, 1140px) 1fr;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .container {
+    grid-template-columns: 1fr minmax(auto, 1320px) 1fr;
+  }
+}
