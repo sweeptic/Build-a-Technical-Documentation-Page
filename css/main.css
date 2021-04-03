@@ -1,7 +1,10 @@
 :root {
   --color-grey-1: #fff;
   --color-grey-2: #d1d1d1;
-  --color-grey-3: rgb(119, 119, 119);
+  --color-grey-3: #777777;
+  --color-grey-4: #5d6778;
+  --color-grey-5: #464e5b;
+
   --color-grey-dark-1: #252529;
   --color-primary-green: #28b76b;
 }
@@ -29,10 +32,30 @@ body {
   color: var(--color-grey-dark-1);
 }
 
-h1 {
-  font-size: calc(2.5rem + 2.7vw);
+.docs-heading {
+  font-size: calc(1.1rem + 2.7vw);
+  font-size: 3rem;
   font-weight: 600;
   line-height: 1.2;
+}
+
+.docs-time {
+  padding-top: 1rem;
+  font-size: 1rem;
+  display: block;
+  font-weight: lighter;
+}
+
+.docs-intro {
+  margin-top: 2rem;
+  color: var(--color-grey-4);
+}
+
+.theme-link {
+  text-decoration-line: underline;
+  text-decoration-thickness: auto;
+  text-decoration-color: #777777;
+  color: var(--color-grey-dark-1);
 }
 
 h2 {
@@ -49,7 +72,8 @@ h3 {
 
 h5 {
   font-weight: 600;
-  font-size: 2rem;
+  font-size: 1.6rem;
+  color: var(--color-grey-5);
 }
 
 p {
@@ -83,8 +107,16 @@ p {
   justify-content: space-between;
   align-items: center;
 }
+
 .navbar-brand {
   font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.fa-file-code {
+  font-size: 3rem;
+  margin: 0 2rem;
 }
 
 .navbar-links {
@@ -112,7 +144,7 @@ wrapper
   width: 0;
 
   position: fixed;
-  top: 50px;
+  /* top: 50px; */
   left: 0;
   height: 100%;
 
@@ -123,7 +155,7 @@ wrapper
 }
 
 .toggleMenu {
-  width: 200px;
+  width: 300px;
 }
 
 .nav {
@@ -131,11 +163,13 @@ wrapper
 }
 
 .btn-mini {
-  margin: 0 25px;
+  font-size: 3rem;
+  margin: 0 1rem;
   height: 50px;
   width: 50px;
-  background: #ea4d2a;
+  background: transparent;
   border: 0;
+  color: var(--color-grey-dark-1);
   cursor: pointer;
 }
 
@@ -144,13 +178,15 @@ wrapper
   box-shadow: none;
 }
 
-.fas {
+.fa-bars {
   font-family: 'Font Awesome 5 Free';
-  color: white;
+  color: var(--color-grey-dark-1);
 }
 
 .nav-link {
   text-decoration: none;
+  color: var(--color-grey-5);
+  font-size: 1.6rem;
 }
 
 .section-title {
@@ -179,7 +215,7 @@ wrapper
 /* 356px */
 
 .container {
-  padding: 2rem;
+  padding: 3.5rem 2rem;
 }
 /* OTHER */
 .section {
@@ -205,6 +241,10 @@ wrapper
   .docs-wrapper {
     grid-template-columns: 1fr minmax(auto, 720px) 1fr;
   }
+
+  .docs-heading {
+    font-size: 4.8rem;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -227,6 +267,7 @@ wrapper
   .docs-sidebar {
     grid-column: 1/2;
     width: 300px;
+    /* top: 0; */
   }
 
   .docs-content {
@@ -239,17 +280,13 @@ wrapper
     grid-column: 2/3;
   }
 
-  h2 {
-    font-size: 5.2rem;
-  }
-
-  h3 {
-    font-size: 2.5rem;
-  }
-
   .docs-sidebar {
     /* grid-column: 1/2;
     width: 300px; */
     position: relative;
+  }
+
+  .btn-mini {
+    display: none;
   }
 }
