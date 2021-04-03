@@ -92,10 +92,11 @@ wrapper
    -content */
 .docs-wrapper {
   display: grid;
-  grid-template-columns: minmax(30px, auto) auto minmax(30px, auto);
+  grid-template-columns: minmax(2rem, auto) auto minmax(2rem, auto);
 }
 
 .docs-sidebar {
+  /* margin: 4rem; */
   width: 0;
   /* width: 300px; */
 
@@ -106,6 +107,10 @@ wrapper
   transition: all 0.2s;
 }
 
+.nav {
+  padding: 4rem;
+}
+
 .docs-content {
   grid-column: 2 / 3;
   background-color: wheat;
@@ -113,6 +118,9 @@ wrapper
 
 /* 356px */
 
+.container {
+  padding: 2rem;
+}
 /* OTHER */
 .section {
   padding: 5rem 0;
