@@ -64,26 +64,38 @@ p {
   /* color: red; */
 }
 
+/* docs-page
+   -navbar
+   -docs-wrapper */
+.docs-page {
+  display: grid;
+  grid-template-rows: min-content auto;
+}
+
 /* NAVBAR */
 .navbar {
+  grid-row: 1/2;
   position: sticky;
   top: 0;
-  min-height: 5rem;
+  min-height: 50px;
   background-color: yellowgreen;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .navbar-brand {
   font-size: 2rem;
 }
 
-.nav-links {
+.navbar-links {
   font-size: 1.6rem;
   color: rgba(0, 0, 0, 0.55);
+  display: none;
 }
 
-/* docs-page
-   -navbar
-   -docs-wrapper */
+.navbar-link {
+  margin: 0 2rem;
+}
 
 /* LAYOUT  */
 /* 
@@ -91,24 +103,72 @@ wrapper
    -sidebar 
    -content */
 .docs-wrapper {
+  grid-row: 2/3;
   display: grid;
   grid-template-columns: minmax(2rem, auto) auto minmax(2rem, auto);
 }
 
 .docs-sidebar {
-  /* margin: 4rem; */
   width: 0;
-  /* width: 300px; */
 
-  position: absolute;
-  overflow: hidden;
+  position: fixed;
+  top: 50px;
+  left: 0;
+  height: 100%;
 
+  overflow-x: hidden;
+  overflow-y: scroll;
   background-color: rgba(172, 255, 47, 0.692);
   transition: all 0.2s;
 }
 
+.toggleMenu {
+  width: 200px;
+}
+
 .nav {
-  padding: 4rem;
+  padding-left: 2rem;
+}
+
+.btn-mini {
+  margin: 0 25px;
+  height: 50px;
+  width: 50px;
+  background: #ea4d2a;
+  border: 0;
+  cursor: pointer;
+}
+
+.btn-mini:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.fas {
+  font-family: 'Font Awesome 5 Free';
+  color: white;
+}
+
+.nav-link {
+  text-decoration: none;
+}
+
+.section-title {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.nav-item {
+  margin: 1rem 0;
+  list-style: none;
+}
+
+.nav-item:not(.section-title) {
+  margin-left: 5rem;
+}
+
+.nav-item-title {
+  margin-left: 1.5rem;
 }
 
 .docs-content {
@@ -151,6 +211,11 @@ wrapper
   .docs-wrapper {
     grid-template-columns: 1fr minmax(auto, 992px) 1fr;
   }
+
+  .navbar-links {
+    display: flex;
+    list-style: none;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -162,7 +227,6 @@ wrapper
   .docs-sidebar {
     grid-column: 1/2;
     width: 300px;
-    position: relative;
   }
 
   .docs-content {
@@ -186,5 +250,6 @@ wrapper
   .docs-sidebar {
     /* grid-column: 1/2;
     width: 300px; */
+    position: relative;
   }
 }
