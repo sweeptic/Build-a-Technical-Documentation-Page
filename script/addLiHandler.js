@@ -5,16 +5,17 @@
   window.onload = function () {
     'use strict';
 
-    if (liItems.length > 0) {
-      [...liItems].map(element => {
-        element.addEventListener(
-          'click',
-          () => {
-            navHeaderMenu.classList.toggle('toggleMenu');
-          },
-          false
-        );
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        // e.preventDefault();
+
+        // document.querySelector(this.getAttribute('href')).scrollIntoView({
+        //   behavior: 'smooth',
+        //   block: 'center',
+        // });
+
+        navHeaderMenu.classList.toggle('toggleMenu');
       });
-    }
+    });
   };
 })();
