@@ -198,6 +198,7 @@ strong {
 
 .docs-content {
   grid-column: 2 / 3;
+  /* height: calc(100vh - 120px); */
 }
 
 .docs-heading {
