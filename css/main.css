@@ -170,6 +170,7 @@ strong {
 }
 
 .docs-wrapper {
+  height: calc(100vh - 120px);
   display: grid;
   overflow: auto;
   grid-template-columns: minmax(2rem, auto) auto minmax(2rem, auto);
