@@ -22,12 +22,6 @@
   box-sizing: inherit;
 }
 
-html,
-body {
-  height: 100%;
-  overflow: auto;
-}
-
 html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -38,6 +32,13 @@ body {
   font-weight: 400;
   line-height: 1.6rem;
   color: var(--color-grey-dark-1);
+
+  /* chrome mobile fix */
+  height: 100vh;
+  max-height: 100vh;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
 }
 
 h2,
