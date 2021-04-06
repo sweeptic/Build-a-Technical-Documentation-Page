@@ -98,6 +98,13 @@ strong {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  /* chrome mobile fix */
+  height: 100vh;
+  max-height: 100vh;
+  min-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .navbar-brand {
