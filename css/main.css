@@ -83,6 +83,7 @@ strong {
   position: sticky;
   top: 0;
   min-height: 120px;
+  height: 120px;
   background-color: var(--color-primary-green);
   /* opacity: 0.5; */
   display: flex;
