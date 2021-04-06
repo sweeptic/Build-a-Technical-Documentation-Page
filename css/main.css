@@ -87,6 +87,8 @@ strong {
 
 /* NAVBAR */
 .navbar {
+  grid-row: 1/2;
+  width: 100%;
   position: fixed;
   transform: translate3d(0, 0, 0);
   -webkit-transform: translate3d(0, 0, 0);
@@ -99,16 +101,10 @@ strong {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  /* chrome mobile fix */
-  /* height: 100vh; */
-  /* max-height: 100vh;
-  min-height: 100vh; */
-  /* overflow-y: auto; */
-  /* overflow-x: hidden; */
 }
 
 .navbar-brand {
+  z-index: 100;
   font-size: 2rem;
   display: flex;
   align-items: center;
@@ -167,9 +163,11 @@ strong {
 .docs-page {
   height: 100vh;
   display: grid;
+  grid-template-rows: 120px auto;
 }
 
 .docs-wrapper {
+  grid-row: 2/3;
   height: calc(100vh - 120px);
   display: grid;
   overflow: auto;
