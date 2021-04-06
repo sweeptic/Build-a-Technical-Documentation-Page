@@ -90,21 +90,21 @@ strong {
   grid-row: 1/2;
   width: 100%;
   position: fixed;
-  transform: translate3d(0, 0, 0);
-  -webkit-transform: translate3d(0, 0, 0);
+  /* transform: translate3d(0, 0, 0); */
+  /* -webkit-transform: translate3d(0, 0, 0); */
   top: 0;
   min-height: 120px;
   max-height: 120px;
   height: 120px;
   background-color: var(--color-primary-green);
-  /* opacity: 0.5; */
+  opacity: 0.5;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .navbar-brand {
-  z-index: 100;
+  /* z-index: 100; */
   font-size: 2rem;
   display: flex;
   align-items: center;
@@ -233,6 +233,7 @@ strong {
 /* MENU */
 
 .btn-mini {
+  z-index: 100;
   font-size: 3rem;
   margin: 0 1rem;
   height: 50px;
