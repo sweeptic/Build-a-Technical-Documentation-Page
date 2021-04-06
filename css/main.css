@@ -163,6 +163,8 @@ strong {
   width: 0;
   background-color: var(--color-primary-green);
   position: fixed;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
   height: 100%;
   padding-bottom: 10rem;
   overflow-x: hidden;
