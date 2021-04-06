@@ -92,6 +92,7 @@ strong {
   -webkit-transform: translateZ(0);
   top: 0;
   min-height: 120px;
+  max-height: 120px;
   height: 120px;
   background-color: var(--color-primary-green);
   /* opacity: 0.5; */
@@ -100,9 +101,9 @@ strong {
   align-items: center;
 
   /* chrome mobile fix */
-  height: 100vh;
-  max-height: 100vh;
-  min-height: 100vh;
+  /* height: 100vh; */
+  /* max-height: 100vh;
+  min-height: 100vh; */
   overflow-y: auto;
   overflow-x: hidden;
 }
