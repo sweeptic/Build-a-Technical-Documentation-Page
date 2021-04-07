@@ -102,7 +102,7 @@ strong {
   display: none;
 }
 
-.navbar-link {
+.navbar-item {
   margin: 0 2rem;
 }
 
@@ -116,6 +116,7 @@ strong {
   color: var(--color-grey-dark-1);
 }
 
+.navbar-link,
 .nav-custom-link,
 .nav-section-link,
 .nav-link {
@@ -123,6 +124,13 @@ strong {
   color: var(--color-grey-5);
   font-size: 1.6rem;
   color: black;
+}
+
+.navbar-link:hover,
+.nav-link:hover,
+.nav-item-title:hover {
+  color: whitesmoke;
+  transition: all 0.2s;
 }
 
 .nav-item {
