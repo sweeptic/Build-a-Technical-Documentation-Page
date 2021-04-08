@@ -8,7 +8,7 @@
   --color-grey-5: #464e5b;
 
   --color-grey-dark-1: #252529;
-  --color-primary-green: #28b76b;
+  --color-primary-color: #ddd;
 }
 
 * {
@@ -83,7 +83,7 @@ strong {
   position: sticky;
   top: 0;
   min-height: 120px;
-  background-color: var(--color-primary-green);
+  background-color: var(--color-primary-color);
   /* opacity: 0.5; */
   display: flex;
   justify-content: space-between;
@@ -168,7 +168,7 @@ strong {
 
 .docs-sidebar {
   width: 0;
-  background-color: var(--color-primary-green);
+  background-color: var(--color-primary-color);
   position: fixed;
   height: 100%;
   padding-bottom: 10rem;
